@@ -1,9 +1,11 @@
+extends layout
+
 block content
     h1 #{title}
-    form(method='POST', action='/articles/edit/'+article._id)
+    form(method='POST', action='/article/edit/'+article._id)
         #form-group
             label Title:
-            input.form-control(name='title', type='text', value=article.title)
+            input.form-control(name='title', type='text' value=article.title)
         #form-group
             label Author:
             input.form-control(name='author', type='text' value=article.author)
